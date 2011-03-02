@@ -2,11 +2,13 @@ require 'bundler/capistrano'
 
 default_run_options[:pty] = false
 ssh_options[:forward_agent] = true
+ssh_options[:paranoid] = false
 set :use_sudo, false
 set :user, "claco"
 
 set :application, "therewith.me"
-set :repository,  "git@github.com:claco/herewith.me.git"
+set :repository,  "git@github.com:claco/therewith.me.git"
+set :repository, "git://github.com/claco/therewith.me.git"
 
 set :scm, :git
 set :branch, 'master'
