@@ -7,7 +7,6 @@ set :use_sudo, false
 set :user, "claco"
 
 set :application, "therewith.me"
-set :repository,  "git@github.com:claco/therewith.me.git"
 set :repository, "git://github.com/claco/therewith.me.git"
 
 set :scm, :git
