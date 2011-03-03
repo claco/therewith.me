@@ -1,2 +1,11 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<p>
+Tired of handing out your contact information at a meetup? Can't remember who was at that last meeting?
+There With Me to the rescue! Simply login with your Twitter or FaceBook account and let everyone know you were there!
+</p>
+<p>
+  Enter your event key to get started (i.e. MarchClerb2011)
+<%= form_tag do %>
+  Event key: <%= text_field_tag(:key) %> <%= submit_tag :Start! %>
+<% end %>
+</p>
+

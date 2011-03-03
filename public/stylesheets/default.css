@@ -1,0 +1,23 @@
+#wrapper {
+  margin: 15px auto 20px auto;
+  width: 600px;
+}
+
+#header {
+  margin-bottom: 50px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  line-height: 20px;
+}
+
+#authentication, #people {
+  margin-top: 35px;
+}
+
+.person .name {
+  font-weight: bold;
+  font-size: 1.0em;
+}

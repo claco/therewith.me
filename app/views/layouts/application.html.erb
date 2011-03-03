@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TherewithMe</title>
+  <title>There With Me</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div id="wrapper">
+    <div id="header">
+      <a href="/"><img src="/images/therewithme.png" /></a>
+    </div>
+    <div id="contents">
+      <%= yield %>
+    </div>
+    <div id="footer">
 
-<%= yield %>
-
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<% if @event %>
+  <h1><%= @event.name %></h1>
+  <div id="people">
+    <% @people.length %>
+    <% @people.each do |p| %>
+      <div class="person">
+        <span class="name"><%= p.name %></span>
+        <% if p.provider == 'twitter' %>
+          via Twitter (<a href="http://twitter.com/<%=p.nickname%>"><%= p.nickname%></a>)
+        <% elsif p.provider == 'facebook' %>
+          via FaceBook (<a href="http://facebook.com/<%=p.nickname%>"><%= p.nickname%></a>)
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <% if !authenticated? %>
+    <div id="authentication">
+      <p>
+        Login and leave your mark so people can find you later!
+      </p>
+
+      <a href="/auth/twitter"><img src="/images/sign-in-with-twitter-d.png" /></a>
+      <a href="/auth/facebook"><img src="/images/fb_connect.png" /></a>
+    </div>
+  <% end %>
+<% else %>
+  <% if authenticated? %>
+    <div id="message"><%= flash.now[:error] %></div>
+    <%= form_tag do %>
+      Event name: <%= text_field_tag(:name) %> <%= submit_tag :Start! %>
+    <% end %>
+  <% else %>
+    <div id="authentication">
+      <p>
+        No one has claimed this event! Login and be the first!
+      </p>
+
+      <a href="/auth/twitter"><img src="/images/sign-in-with-twitter-d.png" /></a>
+      <a href="/auth/facebook"><img src="/images/fb_connect.png" /></a>
+    </div>
+  <% end %>
+<% end %>
+
+
