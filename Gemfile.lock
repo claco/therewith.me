@@ -1,3 +1,43 @@
+GIT
+  remote: git://github.com/claco/omniauth.git
+  revision: b78f557ae28120f8b245dd4176105f0842ff3c44
+  branch: linkedin_nickname
+  specs:
+    oa-basic (0.2.0.beta5)
+      multi_json (~> 0.0.2)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.2.0.beta5)
+      rest-client (~> 1.6.0)
+    oa-core (0.2.0.beta5)
+      rack (~> 1.1)
+    oa-enterprise (0.2.0.beta5)
+      net-ldap (~> 0.1.1)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.2.0.beta5)
+      pyu-ruby-sasl (~> 0.0.3.1)
+      rubyntlm (~> 0.1.1)
+    oa-more (0.2.0.beta5)
+      multi_json (~> 0.0.2)
+      oa-core (= 0.2.0.beta5)
+      rest-client (~> 1.6.0)
+    oa-oauth (0.2.0.beta5)
+      multi_json (~> 0.0.2)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.2.0.beta5)
+      oauth (~> 0.4.0)
+      oauth2 (~> 0.1.1)
+    oa-openid (0.2.0.beta5)
+      oa-core (= 0.2.0.beta5)
+      rack-openid (~> 1.2.0)
+      ruby-openid-apps-discovery
+    omniauth (0.2.0.beta5)
+      oa-basic (= 0.2.0.beta5)
+      oa-core (= 0.2.0.beta5)
+      oa-enterprise (= 0.2.0.beta5)
+      oa-more (= 0.2.0.beta5)
+      oa-oauth (= 0.2.0.beta5)
+      oa-openid (= 0.2.0.beta5)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -62,39 +102,10 @@ GEM
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     nokogiri (1.4.4)
-    oa-basic (0.1.6)
-      multi_json (~> 0.0.2)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.1.6)
-      rest-client (~> 1.6.0)
-    oa-core (0.1.6)
-      rack (~> 1.1)
-    oa-enterprise (0.1.6)
-      net-ldap (~> 0.1.1)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.1.6)
-      pyu-ruby-sasl (~> 0.0.3.1)
-      rubyntlm (~> 0.1.1)
-    oa-oauth (0.1.6)
-      multi_json (~> 0.0.2)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.1.6)
-      oauth (~> 0.4.0)
-      oauth2 (~> 0.1.0)
-    oa-openid (0.1.6)
-      oa-core (= 0.1.6)
-      rack-openid (~> 1.2.0)
-      ruby-openid-apps-discovery
     oauth (0.4.4)
     oauth2 (0.1.1)
       faraday (~> 0.5.0)
       multi_json (~> 0.0.4)
-    omniauth (0.1.6)
-      oa-basic (= 0.1.6)
-      oa-core (= 0.1.6)
-      oa-enterprise (= 0.1.6)
-      oa-oauth (= 0.1.6)
-      oa-openid (= 0.1.6)
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.2)
     rack (1.2.1)
@@ -137,6 +148,12 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   net-ssh (<= 2.1.0)
-  omniauth
+  oa-basic!
+  oa-core!
+  oa-enterprise!
+  oa-more!
+  oa-oauth!
+  oa-openid!
+  omniauth!
   rails (= 3.0.5)
   sqlite3-ruby (= 1.2.1)

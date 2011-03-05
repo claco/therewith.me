@@ -9,6 +9,8 @@
           via Twitter (<a href="http://twitter.com/<%=p.nickname%>"><%= p.nickname%></a>)
         <% elsif p.provider == 'facebook' %>
           via FaceBook (<a href="http://facebook.com/<%=p.nickname%>"><%= p.nickname%></a>)
+        <% elsif p.provider == 'linked_in' %>
+          via LinkedIn (<a href="http://www.linkedin.com/in/<%=p.nickname%>"><%=p.nickname%></a>)
         <% end %>
       </div>
     <% end %>
@@ -21,6 +23,7 @@
 
       <a href="/auth/twitter"><img src="/images/sign-in-with-twitter-d.png" /></a>
       <a href="/auth/facebook"><img src="/images/fb_connect.png" /></a>
+      <a href="/auth/linked_in"><img src="/images/button-linkedin.gif" /></a>
     </div>
   <% end %>
 <% else %>
@@ -37,6 +40,7 @@
 
       <a href="/auth/twitter"><img src="/images/sign-in-with-twitter-d.png" /></a>
       <a href="/auth/facebook"><img src="/images/fb_connect.png" /></a>
+      <a href="/auth/linked_in"><img src="/images/button-linkedin.gif" /></a>
     </div>
   <% end %>
 <% end %>

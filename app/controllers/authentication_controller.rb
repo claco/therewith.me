@@ -3,6 +3,7 @@ class AuthenticationController < ApplicationController
     auth = request.env['omniauth.auth']
     key = session[:key]
 
+    puts p(auth)
     session[:uid] = auth['uid']
     session[:name] = auth['user_info']['name']
     session[:nickname] = auth['user_info']['nickname']

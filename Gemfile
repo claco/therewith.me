@@ -1,7 +1,16 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
-gem 'omniauth'
+git "git://github.com/claco/omniauth.git", :branch => "linkedin_nickname" do
+  gem "oa-basic"
+  gem "oa-core"
+  gem "oa-enterprise"
+  gem "oa-more"
+  gem "oa-oauth"
+  gem "oa-openid"
+  gem "omniauth"
+end
+#gem 'omniauth'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
